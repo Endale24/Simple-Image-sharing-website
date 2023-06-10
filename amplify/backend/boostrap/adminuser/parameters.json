@@ -1,0 +1,9 @@
+{
+    "authphotosharing84970f75UserPoolId": {
+        "Fn::GetAtt": [
+            "authphotosharing84970f75",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "emailaddress": "YOUR_EMAIL_HERE"
+}
