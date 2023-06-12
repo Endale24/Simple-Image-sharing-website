@@ -1,4 +1,4 @@
-AWSTemplateFormatVersion: 2010-09-09
+AWSTemplateFormatVersion: 2023-06-15
 
 Parameters:
   env:
@@ -129,7 +129,7 @@ Resources:
     Properties:
       RoleName: !If [ShouldNotCreateEnvResources, 'manbeh84970f75_sns-role', !Join ['',[ 'sns', '84970f75', !Select [3, !Split ['-', !Ref 'AWS::StackName']], '-', !Ref env]]]
       AssumeRolePolicyDocument:
-        Version: "2012-10-17"
+        Version: "2023-06-15"
         Statement:
           - Sid: ""
             Effect: "Allow"
@@ -144,7 +144,7 @@ Resources:
         -
           PolicyName: manbeh84970f75-sns-policy
           PolicyDocument:
-            Version: "2012-10-17"
+            Version: "2023-06-15"
             Statement:
               -
                 Effect: "Allow"
@@ -287,7 +287,7 @@ Resources:
       Roles:
         - !Ref UserPoolClientRole
       PolicyDocument:
-        Version: '2012-10-17'
+        Version: '2023-06-15'
         Statement:
           - Effect: Allow
             Action:
@@ -304,7 +304,7 @@ Resources:
       Roles:
         - !Ref UserPoolClientRole
       PolicyDocument:
-        Version: 2012-10-17
+        Version: 2023-06-15
         Statement:
           - Effect: Allow
             Action:
